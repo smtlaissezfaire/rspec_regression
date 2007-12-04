@@ -16,7 +16,6 @@ class RspecRegressionGenerator < Rails::Generator::NamedBase
   def regression_name
     self.name.underscore.split("_").join(" ")
   end
-
   
   def banner
     "Usage: #{$0} generate RegressionName [regression_type]"
