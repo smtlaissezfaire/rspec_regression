@@ -1,0 +1,10 @@
+
+./script/generate regression RegressionName [behaviour_type]
+
+This will create a stub file in spec/regressions, which is timestamped with today's date
+along with the regression name given to script/generate.  The Behaviour type should be one of:
+  
+  controller
+  model
+  view
+  helper
