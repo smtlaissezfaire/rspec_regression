@@ -30,7 +30,8 @@ class RspecRegressionGenerator < Rails::Generator::NamedBase
         :shebang => options[:shebang] == DEFAULT_SHEBANG ? nil : options[:shebang] 
       }
 
-      m.directory 'db'
+      m.directory 'spec'
+      m.directory 'spec/regressions'
       m.template  'template.erb',                "spec/regressions/#{todays_date}_#{file_path}.rb"
     end
   end
