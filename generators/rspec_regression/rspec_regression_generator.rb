@@ -18,7 +18,7 @@ class RspecRegressionGenerator < Rails::Generator::NamedBase
   end
   
   def banner
-    "Usage: #{$0} generate RegressionName [regression_type]"
+    "Usage: #{$0} RegressionName [regression_type]"
   end
 
   def manifest
