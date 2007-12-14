@@ -10,11 +10,11 @@ class RspecRegressionGenerator < Rails::Generator::NamedBase
   end
 
   def todays_date
-    @now.strftime("%Y-%m-%d")
+    now.strftime("%Y-%m-%d")
   end
   
   def todays_date_underscored
-    @now.strftime("%Y_%m-%d")
+    now.strftime("%Y_%m_%d")
   end
 
   def behaviour_type
