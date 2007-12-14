@@ -5,8 +5,16 @@ class RspecRegressionGenerator < Rails::Generator::NamedBase
                               Config::CONFIG['ruby_install_name'])
 
 
+  def now
+    @now ||= Time.now
+  end
+
   def todays_date
-    Time.now.strftime("%Y-%m-%d")
+    @now.strftime("%Y-%m-%d")
+  end
+  
+  def todays_date_underscored
+    @now.strftime("%Y_%m-%d")
   end
 
   def behaviour_type
@@ -32,7 +40,7 @@ class RspecRegressionGenerator < Rails::Generator::NamedBase
 
       m.directory 'spec'
       m.directory 'spec/regressions'
-      m.template  'template.erb',                "spec/regressions/#{todays_date}_#{file_path}.rb"
+      m.template  'template.erb',                "spec/regressions/#{todays_date_underscored}_#{file_path}.rb"
     end
   end
 
